@@ -12,6 +12,7 @@ let addEmployee = require("express").Router().post("/",(req,res)=>{
             "DOB":req.body.DOB,
             "Gender":req.body.Gender,
             "languages":req.body.languages
+            
         };
         sambaIT.connect(url,(err,client)=>{
             if(err) throw err;
