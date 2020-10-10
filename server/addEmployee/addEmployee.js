@@ -1,4 +1,3 @@
-
 let mongodb = require("mongodb");
 let sambaIT = mongodb.MongoClient;
 let url = "mongodb+srv://admin:admin@miniprojectdb.nzphu.mongodb.net/miniprojectdb?retryWrites=true&w=majority" || "mongodb://localhost:27017/miniprojectdb";
@@ -12,7 +11,6 @@ let addEmployee = require("express").Router().post("/",(req,res)=>{
             "DOB":req.body.DOB,
             "Gender":req.body.Gender,
             "languages":req.body.languages
-            
         };
         sambaIT.connect(url,(err,client)=>{
             if(err) throw err;
